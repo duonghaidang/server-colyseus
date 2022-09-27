@@ -1,5 +1,7 @@
 import { Room, Client } from "colyseus";
-import { Schema, type, MapSchema } from "@colyseus/schema";
+import { Schema, Context, MapSchema } from "@colyseus/schema";
+
+const type = Context.create();
 
 export class Player extends Schema {
     @type("number")
@@ -14,6 +16,7 @@ export class State extends Schema {
     players = new MapSchema<Player>();
 
     something = "This attribute won't be sent to the client-side";
+
 
     createPlayer(sessionId: string) {
         this.players.set(sessionId, new Player());

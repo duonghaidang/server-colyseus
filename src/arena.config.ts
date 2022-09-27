@@ -1,5 +1,5 @@
 import Arena from "@colyseus/arena";
-import { monitor } from "@colyseus/monitor";
+// import { monitor } from "@colyseus/monitor";
 import path from 'path';
 import serveIndex from 'serve-index';
 import express from 'express';
@@ -67,7 +67,7 @@ export default Arena({
         // app.use(express.static(path.join(__dirname, "static")));
 
         // (optional) attach web monitoring panel
-        app.use('/colyseus', monitor());
+        // app.use('/colyseus', monitor());
     },
 
 
