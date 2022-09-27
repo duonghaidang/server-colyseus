@@ -5,10 +5,10 @@ const type = Context.create();
 
 export class Player extends Schema {
     @type("number")
-    x = Math.floor(Math.random() * 400);
+    x = 0.0;
 
     @type("number")
-    y = Math.floor(Math.random() * 400);
+    y = 0.0;
 }
 
 export class State extends Schema {
