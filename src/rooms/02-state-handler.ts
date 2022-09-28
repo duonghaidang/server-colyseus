@@ -27,13 +27,8 @@ export class State extends Schema {
     }
 
     movePlayer (sessionId: string, movement: any) {
-        if (movement.x) {
-            this.players.get(sessionId).x += movement.x;
-
-        }
-        if (movement.y) {
-            this.players.get(sessionId).y += movement.y;
-        }
+            this.players.get(sessionId).x = movement.x;
+            this.players.get(sessionId).y = movement.y;
     }
 }
 
