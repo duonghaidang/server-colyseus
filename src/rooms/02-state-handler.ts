@@ -11,7 +11,7 @@ export class Player extends Schema {
     y = 0;
 
     @type("boolean")
-    isStop = false;
+    isWalking = false;
 }
 
 export class State extends Schema {
@@ -31,7 +31,7 @@ export class State extends Schema {
     movePlayer(sessionId: string, movement: any) {
         this.players.get(sessionId).x += movement.x;
         this.players.get(sessionId).y += movement.y;
-        this.players.get(sessionId).isStop = movement.isStop;
+        this.players.get(sessionId).isWalking = movement.isWalking;
     }
 }
 
